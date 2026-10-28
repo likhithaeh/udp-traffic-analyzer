@@ -1,0 +1,108 @@
+likhitha@likhitha-VirtualBox:~/udp-traffic-analyzer$ python3 sender/sender.py --dest 127.0.0.1 --port 5001 --duration 10 --pps 100 --size 256
+UDP Bandwidth Meter - Sender
+Destination: 127.0.0.1:5001
+Target rate: 100 packets/second
+Packet size: 256 bytes
+
+--- Sender Statistics ---
+Elapsed time: 10.01 seconds
+Packets sent: 998
+Bytes sent: 255488
+Average packet rate: 99.72 packets/sec
+Application throughput: 0.204 Mbps
+likhitha@likhitha-VirtualBox:~/udp-traffic-analyzer$ python3 sender/sender.py --dest 127.0.0.1 --port 5001 --duration 10 --pps 100 --size 512
+UDP Bandwidth Meter - Sender
+Destination: 127.0.0.1:5001
+Target rate: 100 packets/second
+Packet size: 512 bytes
+
+--- Sender Statistics ---
+Elapsed time: 10.00 seconds
+Packets sent: 995
+Bytes sent: 509440
+Average packet rate: 99.46 packets/sec
+Application throughput: 0.407 Mbps
+likhitha@likhitha-VirtualBox:~/udp-traffic-analyzer$python3 sender/sender.py --dest 127.0.0.1 --port 5001 --duration 10 --pps 100 --size 1024
+UDP Bandwidth Meter - Sender
+Destination: 127.0.0.1:5001
+Target rate: 100 packets/second
+Packet size: 1024 bytes
+
+--- Sender Statistics ---
+Elapsed time: 10.00 seconds
+Packets sent: 1000
+Bytes sent: 1024000
+Average packet rate: 99.98 packets/sec
+Application throughput: 0.819 Mbps
+likhitha@likhitha-VirtualBox:~/udp-traffic-analyzer$ python3 sender/sender.py --dest 127.0.0.1 --port 5001 --duration 10 --pps 500 --size 256
+UDP Bandwidth Meter - Sender
+Destination: 127.0.0.1:5001
+Target rate: 500 packets/second
+Packet size: 256 bytes
+
+--- Sender Statistics ---
+Elapsed time: 10.00 seconds
+Packets sent: 4813
+Bytes sent: 1232128
+Average packet rate: 481.18 packets/sec
+Application throughput: 0.985 Mbps
+likhitha@likhitha-VirtualBox:~/udp-traffic-analyzer$ python3 sender/sender.py --dest 127.0.0.1 --port 5001 --duration 10 --pps 500 --size 512
+UDP Bandwidth Meter - Sender
+Destination: 127.0.0.1:5001
+Target rate: 500 packets/second
+Packet size: 512 bytes
+
+--- Sender Statistics ---
+Elapsed time: 10.00 seconds
+Packets sent: 4851
+Bytes sent: 2483712
+Average packet rate: 485.07 packets/sec
+Application throughput: 1.987 Mbps
+likhitha@likhitha-VirtualBox:~/udp-traffic-analyzer$ python3 sender/sender.py --dest 127.0.0.1 --port 5001 --duration 10 --pps 500 --size 1024
+UDP Bandwidth Meter - Sender
+Destination: 127.0.0.1:5001
+Target rate: 500 packets/second
+Packet size: 1024 bytes
+
+--- Sender Statistics ---
+Elapsed time: 10.00 seconds
+Packets sent: 4828
+Bytes sent: 4943872
+Average packet rate: 482.69 packets/sec
+Application throughput: 3.954 Mbps
+likhitha@likhitha-VirtualBox:~/udp-traffic-analyzer$ python3 sender/sender.py --dest 127.0.0.1 --port 5001 --duration 10 --pps 1000 --size 256
+UDP Bandwidth Meter - Sender
+Destination: 127.0.0.1:5001
+Target rate: 1000 packets/second
+Packet size: 256 bytes
+
+--- Sender Statistics ---
+Elapsed time: 10.00 seconds
+Packets sent: 9211
+Bytes sent: 2358016
+Average packet rate: 921.05 packets/sec
+Application throughput: 1.886 Mbps
+likhitha@likhitha-VirtualBox:~/udp-traffic-analyzer$ python3 sender/sender.py --dest 127.0.0.1 --port 5001 --duration 10 --pps 1000 --size 512
+UDP Bandwidth Meter - Sender
+Destination: 127.0.0.1:5001
+Target rate: 1000 packets/second
+Packet size: 512 bytes
+
+--- Sender Statistics ---
+Elapsed time: 10.00 seconds
+Packets sent: 9067
+Bytes sent: 4642304
+Average packet rate: 906.68 packets/sec
+Application throughput: 3.714 Mbps
+likhitha@likhitha-VirtualBox:~/udp-traffic-analyzer$ python3 sender/sender.py --dest 127.0.0.1 --port 5001 --duration 10 --pps 1000 --size 1024
+UDP Bandwidth Meter - Sender
+Destination: 127.0.0.1:5001
+Target rate: 1000 packets/second
+Packet size: 1024 bytes
+
+--- Sender Statistics ---
+Elapsed time: 10.00 seconds
+Packets sent: 7063
+Bytes sent: 7232512
+Average packet rate: 706.23 packets/sec
+Application throughput: 5.785 Mbps
