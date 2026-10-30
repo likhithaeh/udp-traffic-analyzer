@@ -270,6 +270,6 @@ In dynamic mode the switch counts packets *before* the meter acts. So for C and 
 
 | Member | Responsibility |
 |---|---|
-| Member 1 | UDP sender and receiver |
-| Member 2 | Mininet topology, Ryu controller, dynamic rate limiting |
-| Member 3 | Integration, experiments, analysis, documentation |
+| Likitha | UDP sender and receiver |
+| Vihaan | Mininet topology, Ryu controller, dynamic rate limiting |
+| Rutvik | Integration, experiments, analysis, documentation |
