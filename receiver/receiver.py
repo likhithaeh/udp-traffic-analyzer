@@ -10,13 +10,12 @@ def main():
     parser = argparse.ArgumentParser(description="UDP Bandwidth Meter Receiver")
     parser.add_argument("--port", type=int, default=5001)
     parser.add_argument("--idle-timeout", type=float, default=3.0,
-                        help="stop after this many seconds with no packets")
+                        help="stop after this many seconds with no packets (timer starts at first packet)")
     parser.add_argument("--out", help="write a JSON summary to this file")
     args = parser.parse_args()
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind(("0.0.0.0", args.port))
-    sock.settimeout(args.idle_timeout)
 
     seen = set()
     rx_datagrams = dups = bytes_rx = 0
@@ -38,6 +37,7 @@ def main():
         rx_datagrams += 1
         if first is None:
             first = now
+            sock.settimeout(args.idle_timeout)  # wait indefinitely for the first packet
         last = now
 
         if seq in seen:
