@@ -1,5 +1,4 @@
-# udp-traffic-analyzer
-UDP-based bandwidth measurement and traffic analysis with SDN flow statistics.
+
 # Bandwidth Meter and Traffic Analyzer (UDP + SDN)
 
 A UDP-based bandwidth measurement application deployed on a Mininet network controlled by a Ryu SDN controller. The project compares **application-level measurements** (what the sender and receiver count) with **SDN switch flow statistics** (what the OpenFlow switch counts) under different traffic loads, and evaluates a **dynamic SDN mode** in which the controller detects threshold violations and rate-limits the flow with an OpenFlow meter.
