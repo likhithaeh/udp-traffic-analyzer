@@ -1,16 +1,18 @@
+import argparse
+import json
 import socket
 import time
-import argparse
 
 parser = argparse.ArgumentParser(
     description="UDP Bandwidth Meter Sender"
 )
 
 parser.add_argument("--dest", default="10.0.0.2")
-parser.add_argument("--port", type=int, default=5005)
+parser.add_argument("--port", type=int, default=5001)
 parser.add_argument("--duration", type=float, default=10)
 parser.add_argument("--pps", type=int, default=500)
 parser.add_argument("--size", type=int, default=1024)
+parser.add_argument("--out", help="write a JSON summary to this file")
 
 args = parser.parse_args()
 
@@ -26,6 +28,7 @@ sent_packets = 0
 sent_bytes = 0
 
 interval = 1.0 / args.pps
+start_wall = time.time()
 start = time.monotonic()
 deadline = start + args.duration
 next_send = start
@@ -64,6 +67,7 @@ finally:
     sock.close()
 
 elapsed = time.monotonic() - start
+end_wall = time.time()
 
 throughput = (
     sent_bytes * 8 / elapsed / 1_000_000
@@ -76,3 +80,22 @@ print(f"Packets sent: {sent_packets}")
 print(f"Bytes sent: {sent_bytes}")
 print(f"Average packet rate: {sent_packets / elapsed:.2f} packets/sec")
 print(f"Application throughput: {throughput:.3f} Mbps")
+
+if args.out:
+    summary = {
+        "role": "sender",
+        "dest": args.dest,
+        "port": args.port,
+        "target_pps": args.pps,
+        "payload_bytes": args.size,
+        "duration_s": args.duration,
+        "sent_packets": sent_packets,
+        "sent_bytes": sent_bytes,
+        "elapsed_s": round(elapsed, 6),
+        "avg_pps": round(sent_packets / elapsed, 3) if elapsed > 0 else 0.0,
+        "throughput_mbps": round(throughput, 6),
+        "start_time": start_wall,
+        "end_time": end_wall,
+    }
+    with open(args.out, "w") as f:
+        json.dump(summary, f, indent=2)
