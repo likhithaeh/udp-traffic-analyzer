@@ -1,0 +1,15 @@
+{
+  "role": "sender",
+  "dest": "10.0.0.2",
+  "port": 5001,
+  "target_pps": 500,
+  "payload_bytes": 512,
+  "duration_s": 20.0,
+  "sent_packets": 9998,
+  "sent_bytes": 5118976,
+  "elapsed_s": 20.001776,
+  "avg_pps": 499.856,
+  "throughput_mbps": 2.047409,
+  "start_time": 1793348360.25038,
+  "end_time": 1793348380.2521803
+}

@@ -1,0 +1,1 @@
+- Stats-sampling timing artifact: 3 runs(baseline C r1, dynamic E r1, dynamic C r3) had the end switch sample taken slightly before traffic finished; missing packets appear at the start of the next run. analyze.py recomputes counters from flow_stats.csv with a 1 s margin.

@@ -1,0 +1,13 @@
+{
+  "role": "receiver",
+  "datagrams_received": 9998,
+  "unique_received": 9998,
+  "duplicates": 0,
+  "expected": 9998,
+  "lost": 0,
+  "loss_pct": 0.0,
+  "bytes_received": 10237952,
+  "throughput_bps": 4095546.09,
+  "first_rx": 1793348422.5324523,
+  "last_rx": 1793348442.5306685
+}
